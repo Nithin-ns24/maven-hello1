@@ -1,0 +1,19 @@
+# getting base image ubuntu
+
+FROM ubuntu
+
+MAINTAINER nithin246 <nithinnith24@gmail.com>
+
+WORKDIR /home/ubuntu/Docker
+
+RUN apt-get update
+
+RUN apt-get upgrade -y
+
+RUN apt-get install -y git
+
+RUN git clone https://github.com/Nithin-optit/play-1.git
+
+WORKDIR /home/ubuntu/Docker
+
+EXPOSE 8086
